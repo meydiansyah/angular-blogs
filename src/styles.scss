@@ -18,11 +18,11 @@ body {
 }
 
 .border-bottom {
-  border-bottom: 2px solid black !important;
+  border-bottom: 1px solid black !important;
 }
 
 .border-top {
-  border-top: 2px solid black !important;
+  border-top: 1px solid black !important;
 }
 
 .link-black {
@@ -79,6 +79,15 @@ body {
   font-size: 16px !important;
 }
 
+.title-list {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0;
+  font-size: 20px !important;
+}
+
 .top-title {
   font-size: 1.5rem;
 }
@@ -89,6 +98,9 @@ body {
   }
   .title {
     font-size: 0.8rem !important;
+  }
+  .title-list {
+    font-size: 1rem !important;
   }
   .card-top {
     margin: 0 !important;
@@ -107,6 +119,9 @@ body {
 @media (min-width: 975px) {
   .title {
     font-size: 18px !important;
+  }
+  .title-list {
+    font-size: 24px !important;
   }
 }
 

@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="bg-yellow border-top border-bottom">
+<div class="bg-yellow mt-5 border-bottom">
     <div class="container col-xxl-8">
         <div class="row justify-content-center">
           <div class="col-md-10">
@@ -57,20 +57,26 @@
   <div class="row justify-content-center">
     <div class="col-10">
       <div class="row">
-        <div class="col-md-9 col-sm-10">
-          <div class="row flex-row-reverse align-items-center g-5 py-2">
-            <div class="ml-auto col-3">
-              <img src="assets/img/header.png" class="ml-auto img-fluid img-list" alt="title">
-            </div>
-            <div class="col-8">
-              <!-- <a [routerLink]="['/detail']" [queryParams]="{id: resep.payload.doc.id}" class="text-dark"> -->
-              <a href="" class="text-dark">
-                <p class="description">Nama penerbit</p>
-                <h4 class="fw-bold title mb-1">Judul t as as as as as ulisan</h4>
-                <p class="date mb-3">5 Jun</p>
-              </a>
-            </div>
+        <div class="col-md-8 col-sm-10">
+          <div *ngIf="loading" class="text-center mt-2">
+            <div class="spinner-grow" role="status"></div>
+            <p class="muted-text">Please wait a second</p>
           </div>
+          <ng-container *ngIf="!isEmpty">
+              <div class="row flex-row-reverse align-items-center g-5 py-3" *ngFor="let data of blogs; let idx = index;">
+                <div class="ml-auto col-3 p-0">
+                  <img [src]="data.payload.doc.data().image_url" class="ml-auto rounded cursor-pointer img-fluid img-list" alt="title">
+                </div>
+                <div class="col-8">
+                  <!-- <a [routerLink]="['/detail']" [queryParams]="{id: resep.payload.doc.id}" class="text-dark"> -->
+                  <a href="" class="text-dark">
+                    <p class="description">{{ data.payload.doc.data().author }}</p>
+                    <h4 class="fw-bold title-list mb-1">{{ data.payload.doc.data().title }}</h4>
+                    <p class="date mb-3">{{ data.payload.doc.data().created_at }}</p>
+                  </a>
+                </div>
+              </div>
+          </ng-container>
         </div>
         <div class="col-md-3 ml-auto">
           <div class="position-sticky" style="top: 2rem;">

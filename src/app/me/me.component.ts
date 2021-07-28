@@ -1,4 +1,3 @@
-import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -13,7 +12,7 @@ export class MeComponent implements OnInit {
   constructor(
     private auth: AngularFireAuth,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
   }

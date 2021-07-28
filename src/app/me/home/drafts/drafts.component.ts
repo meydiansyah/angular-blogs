@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-drafts',
   templateUrl: './drafts.component.html',
-  styleUrls: ['./drafts.component.scss']
+  styleUrls: ['../home.component.scss']
 })
 export class DraftsComponent implements OnInit {
   blogs: any = {}
@@ -32,7 +32,7 @@ export class DraftsComponent implements OnInit {
       if (!resp) {
         this.router.navigateByUrl('/auth')
       } else {
-        this.fire.collection('user').ref.where('email', '==', resp!.email).onSnapshot(snapshot => {
+        this.fire.collection('user').ref.where('email', '==', resp!.email,).onSnapshot(snapshot => {
           snapshot.forEach(ref => {
             this.dataUser = ref.data();
 
@@ -44,8 +44,13 @@ export class DraftsComponent implements OnInit {
   }
 
   getData() {
-    this.fire.collection('blogs', ref => ref.where('author', '==', this.dataUser.username)).snapshotChanges().subscribe((resp) => {
+    this.fire.collection('blogs', ref => {
+      return ref
+            .where('author', '==', this.dataUser.username)
+            .where('status', '==', 'drafts')
+    }).snapshotChanges().subscribe((resp) => {
       this.blogs = resp
+      console.log(this.blogs)
       if (this.blogs.length === 0) this.isEmpty = true;
       else this.isEmpty = false;
       this.loading = false;

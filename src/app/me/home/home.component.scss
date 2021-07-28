@@ -1,0 +1,26 @@
+.title {
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.isi-text {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.updated-at {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.isi-text,
+.updated-at {
+  color: #b3b3b3 !important;
+}
+
+.border-bottom {
+  border-bottom: 0.9px solid #00000020 !important;
+}
