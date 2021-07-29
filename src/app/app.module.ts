@@ -13,12 +13,14 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MeModule } from './me/me.module';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

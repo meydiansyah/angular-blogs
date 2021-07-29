@@ -68,8 +68,7 @@
                   <img [src]="data.payload.doc.data().image_url" class="ml-auto rounded cursor-pointer img-fluid img-list" alt="title">
                 </div>
                 <div class="col-8">
-                  <!-- <a [routerLink]="['/detail']" [queryParams]="{id: resep.payload.doc.id}" class="text-dark"> -->
-                  <a href="" class="text-dark">
+                  <a [routerLink]="['/detail']" [queryParams]="{id: data.payload.doc.id}" class="text-dark">
                     <p class="description">{{ data.payload.doc.data().author }}</p>
                     <h4 class="fw-bold title-list mb-1">{{ data.payload.doc.data().title }}</h4>
                     <p class="date mb-3">{{ data.payload.doc.data().created_at }}</p>
@@ -83,9 +82,9 @@
             <div class="p-2">
               <h4>Tell me here</h4>
               <ol class="list-unstyled">
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
+                <li><a href="https://github.com/meydiansyah">GitHub</a></li>
+                <li><a href="https://twitter.com/meydiansyah__">Twitter</a></li>
+                <li><a href="https://instagram.com/meydiansyah__">Facebook</a></li>
               </ol>
             </div>
           </div>

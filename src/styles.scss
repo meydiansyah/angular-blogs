@@ -137,3 +137,42 @@ body {
 .cursor-pointer:hover {
   cursor: pointer !important;
 }
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: transparent;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+
+  .card-header {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0 solid rgba(0, 0, 0, 0.125);
+  }
+
+  .card-img {
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    object-fit: cover !important;
+  }
+
+  a {
+    &:hover {
+      .card-img {
+        box-shadow: 0 18px 32px -18px #000;
+        transform: translateY(-6px);
+      }
+    }
+  }
+}
