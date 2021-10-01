@@ -1,3 +1,14 @@
+# [important]
+
+## Firebase Set Up
+
+### Before using this app, please update firebase key before, find the key in :
+
+    /src/app/environments/environments.ts
+    
+> Change value of array firebase with your firebase key
+============================
+
 # Tulisin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
