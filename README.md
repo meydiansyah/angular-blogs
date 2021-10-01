@@ -1,13 +1,12 @@
 # [important]
 
-## Firebase Set Up
+### Firebase Set Up
 
-### Before using this app, please update firebase key before, find the key in :
+#### Before using this app, please update firebase key before, find the key in :
 
     /src/app/environments/environments.ts
     
 > Change value of array firebase with your firebase key
-============================
 
 # Tulisin
 
